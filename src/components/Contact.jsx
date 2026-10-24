@@ -1,46 +1,130 @@
-import { useState } from "react";
-import { CONTACT, PROJECT_TYPES } from "../data/content";
+
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaTiktok,
+  FaWhatsapp,
+  FaEnvelope,
+  FaLocationDot,
+  FaArrowUpRightFromSquare,
+} from "react-icons/fa6";
+
+const CONTACT = {
+  email: "contact@alphaweb.dz",
+  whatsapp: "https://wa.me/213658934340",
+  instagram: "https://www.instagram.com/alpha_web23/",
+  facebook: "https://www.facebook.com/profile.php?id=100093267014202",
+  tiktok: "https://www.tiktok.com/@alpha.web66?_r=1&_t=ZS-99KC8sF69jA&fbclid=IwY2xjawVKACJleHRuA2FlbQIxMABwZG9mBWJyaWQRMW1oQzNnTWViSXN5TVY1SnJzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeJxiP8MtWvtJKzZXBP2PiY7E6iV9jnk7QazPpk1n2utKbb3hLoy_E2RpUwCE_aem_81JBamDXPYttstvQdYTgsg",
+};
 
 export default function Contact() {
-  const [status, setStatus] = useState("");
-
-  // Ouvre la messagerie du visiteur avec la demande pré-remplie
-  const onSubmit = (e) => {
-    e.preventDefault();
-    const f = new FormData(e.currentTarget);
-    const body = `Nom : ${f.get("n")}\nEmail : ${f.get("e")}\nProjet : ${f.get("t")}\n\n${f.get("m")}`;
-    window.location.href =
-      `mailto:${CONTACT.email}?subject=` +
-      encodeURIComponent("Demande de devis – " + f.get("t")) +
-      "&body=" +
-      encodeURIComponent(body);
-    setStatus("Merci ! Votre messagerie s’ouvre pour envoyer la demande.");
-  };
-
   return (
-    <section id="contact" style={{ paddingBottom: 0 }}>
+    <section id="contact" className="contact-section">
       <div className="wrap">
-        <div className="cta-band f rv">
-          <div>
-            <h2>Prêt à lancer votre prochain projet ?</h2>
-            <p>Décrivez-nous votre idée. Nous vous répondons sous 24 h avec un audit et un devis gratuits.</p>
+        <div className="contact-heading">
+          <span className="eyebrow">CONTACT</span>
+          <h2>Parlons de votre projet</h2>
+          <p>
+            Une idée, un site web ou une application à développer ?
+            Contactez-nous directement.
+          </p>
+        </div>
+
+        <div className="contact-grid">
+          <div className="contact-info">
+            <div className="contact-card">
+              <div className="contact-icon">
+                <FaEnvelope />
+              </div>
+              <div className="contact-text">
+                <strong>E-mail</strong>
+                <a href={`mailto:${CONTACT.email}`}>
+                  {CONTACT.email}
+                </a>
+              </div>
+              <a
+                className="contact-arrow"
+                href={`mailto:${CONTACT.email}`}
+                aria-label="Envoyer un e-mail"
+              >
+                <FaArrowUpRightFromSquare />
+              </a>
+            </div>
+
+            <div className="contact-card">
+              <div className="contact-icon">
+                <FaWhatsapp />
+              </div>
+              <div className="contact-text">
+                <strong>WhatsApp</strong>
+                <small>Écrivez-nous directement</small>
+              </div>
+              <a
+                className="contact-arrow"
+                href={`https://wa.me/${CONTACT.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contacter sur WhatsApp"
+              >
+                <FaArrowUpRightFromSquare />
+              </a>
+            </div>
+
+            <div className="contact-card social-card">
+              <div className="contact-icon">
+                <FaLocationDot />
+              </div>
+              <div className="contact-text">
+                <strong>Retrouvez-nous</strong>
+                <small>Annaba, Algérie · Réseaux sociaux</small>
+                <div className="social-links">
+                  <a
+                    href={CONTACT.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href={CONTACT.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebookF />
+                  </a>
+                  <a
+                    href={CONTACT.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                  >
+                    <FaTiktok />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a
+              className="map-link"
+              href="https://www.google.com/maps/search/?api=1&query=Annaba%2C+Algeria"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Voir notre localisation <FaArrowUpRightFromSquare />
+            </a>
           </div>
-          <form className="fm" onSubmit={onSubmit}>
-            <input name="n" placeholder="Votre nom" aria-label="Votre nom" required />
-            <input name="e" type="email" placeholder="Votre email" aria-label="Votre email" required />
-            <select name="t" aria-label="Type de projet">
-              {PROJECT_TYPES.map((t) => (
-                <option key={t}>{t}</option>
-              ))}
-            </select>
-            <textarea name="m" placeholder="Parlez-nous de votre projet" aria-label="Votre message" required />
-            <button className="btn gold" type="submit">
-              Envoyer ma demande
-            </button>
-            <p id="ok" role="status">
-              {status}
-            </p>
-          </form>
+
+          <div className="contact-map">
+            <iframe
+              title="Localisation Alpha Web à Annaba"
+              src="https://maps.google.com/maps?q=Annaba%2C%20Algeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </section>
