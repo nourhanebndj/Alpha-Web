@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Alpha Web Annaba | Websites and app development",
+    "description": "Alpha Web is a web development agency in Annaba, Algeria, building business websites, online stores, mobile apps and custom software."
+  },
+  "nav": {
+    "services": "Services",
+    "projects": "Our work",
+    "method": "Process",
+    "reviews": "Reviews"
+  },
+  "header": {
+    "home": "Alpha Web, home",
+    "mainNav": "Main navigation",
+    "quote": "Get a quote",
+    "menu": "Menu",
+    "language": "Choose language"
+  },
+  "hero": {
+    "tag": "Websites · Apps · ERP software",
+    "titleStart": "Your",
+    "titleAccent": "digital",
+    "titleEnd": "projects come to life",
+    "text": "Websites, mobile apps and ERP software: solutions built around your needs.",
+    "ctaTalk": "Tell us about your project",
+    "ctaWork": "See our work",
+    "badgeProjects": "projects delivered",
+    "badgeSatisfaction": "client satisfaction"
+  },
+  "services": {
+    "title": "Everything you need to succeed online",
+    "text": "One team to design, build and promote your digital product.",
+    "list": [
+      {
+        "title": "Websites",
+        "text": "Modern, fast websites shaped around your goals.",
+        "items": ["Business websites", "Online stores", "Custom websites"]
+      },
+      {
+        "title": "Apps",
+        "text": "Intuitive apps that make everyday life easier for your users.",
+        "items": ["iOS and Android mobile apps", "Web apps", "Custom platforms"]
+      },
+      {
+        "title": "ERP software",
+        "text": "Management tools that bring your operations together and streamline them.",
+        "items": ["Sales and inventory management", "Customer and order management", "Process automation"]
+      }
+    ]
+  },
+  "stats": [
+    { "suffix": "", "label": "projects delivered" },
+    { "suffix": " years", "label": "of digital expertise" },
+    { "suffix": "%", "label": "of clients who stay with us" },
+    { "suffix": "", "label": "experts by your side" }
+  ],
+  "commitments": {
+    "title": "A partner committed to your success",
+    "text": "We work as an extension of your team, from the first conversation until well after launch.",
+    "cta": "Tell us about your project",
+    "list": [
+      {
+        "title": "A personal approach",
+        "text": "Every project starts by listening to your needs, so the solution fits your goals and your business."
+      },
+      {
+        "title": "Open communication",
+        "text": "You stay informed at every stage through regular conversations and clear progress updates."
+      },
+      {
+        "title": "Reliable timelines",
+        "text": "Structured organisation and careful planning keep work moving and agreed deadlines on track."
+      },
+      {
+        "title": "Reliable and scalable",
+        "text": "Carefully built solutions that are easy to extend and designed to support your growth over the long term."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Our work",
+    "text": "A selection of projects built to meet real needs.",
+    "visit": "Visit the site",
+    "list": [
+      {
+        "kind": "Classifieds platform",
+        "title": "KhidmaCar",
+        "text": "A car classifieds platform in Algeria for rentals, sales and services, with search by category and municipality.",
+        "alt": "Home page of the KhidmaCar classifieds platform"
+      },
+      {
+        "kind": "Booking website",
+        "title": "Le Point de Location",
+        "text": "The website of a car rental agency in Annaba, presenting its vehicles and taking online bookings by location and dates.",
+        "alt": "Home page of the Le Point de Location car rental website"
+      },
+      {
+        "kind": "Business website",
+        "title": "Le Gourmet Tlemcen",
+        "text": "The website of a restaurant in Tlemcen, with its story, menu and gallery, plus quick access to directions and phone bookings.",
+        "alt": "Home page of the Le Gourmet restaurant website in Tlemcen"
+      }
+    ]
+  },
+  "method": {
+    "title": "From idea to live product in four steps",
+    "text": "A clear process, with your approval at every stage.",
+    "stepsLabel": "Project steps",
+    "list": [
+      {
+        "title": "Understand",
+        "short": "Needs, goals and priorities",
+        "text": "We talk through your project, goals, users and needs to set a clear direction.",
+        "tags": ["Needs analysis", "Goals", "Planning"]
+      },
+      {
+        "title": "Design",
+        "short": "Structure, user flows and mockups",
+        "text": "We define the structure and user experience, then create mockups for you to approve before development begins.",
+        "tags": ["Architecture", "UX/UI design", "Prototype"]
+      },
+      {
+        "title": "Build",
+        "short": "Development, testing and delivery",
+        "text": "We bring the project to life through step-by-step development, regular testing and a carefully prepared launch.",
+        "tags": ["Development", "Testing and validation", "Delivery"]
+      },
+      {
+        "title": "Evolve",
+        "short": "Follow-up, improvements and longevity",
+        "text": "After delivery, we can keep supporting the project, identify useful improvements and adapt it to your new needs.",
+        "tags": ["Follow-up", "Improvements", "Maintenance"]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "They trust us",
+    "text": "What our clients say after going live.",
+    "stars": "5 out of 5 stars",
+    "choose": "Choose a review",
+    "previous": "Previous review",
+    "next": "Next review",
+    "list": [
+      {
+        "quote": "A responsive team that understood our business from the very first workshop. The site is fast and our customers notice.",
+        "name": "Sarah M.",
+        "role": "Communications manager",
+        "sector": "E-commerce"
+      },
+      {
+        "quote": "The app was delivered on time, with real follow-up after launch.",
+        "name": "Karim B.",
+        "role": "Managing director",
+        "sector": "Logistics"
+      },
+      {
+        "quote": "Our requests are handled seriously, even when they are urgent. A partner we can trust.",
+        "name": "Yasmine L.",
+        "role": "Digital project manager",
+        "sector": "Healthcare"
+      },
+      {
+        "quote": "Our new platform has saved the whole team time. The result exceeds our expectations.",
+        "name": "Nadir H.",
+        "role": "Operations director",
+        "sector": "Industry"
+      },
+      {
+        "quote": "SEO doubled our quote requests within a few months. Thank you for the transparent reporting.",
+        "name": "Amel R.",
+        "role": "Founder",
+        "sector": "Services"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "list": [
+      {
+        "q": "How much does a website or app cost?",
+        "a": "The price depends on complexity and features. We provide a detailed, free quote after a first conversation."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "Allow a few weeks for a business website and two to four months for a mobile app, depending on scope."
+      },
+      {
+        "q": "Can I update my site myself?",
+        "a": "Yes. We train your team to manage the content on their own."
+      },
+      {
+        "q": "Do you provide maintenance?",
+        "a": "Yes: updates, backups, security and new features after delivery."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "CONTACT",
+    "title": "Let’s talk about your project",
+    "text": "Have an idea, a website or an app to build? Get in touch with us directly.",
+    "email": "Email",
+    "emailAria": "Send an email",
+    "whatsapp": "WhatsApp",
+    "whatsappNote": "Message us directly",
+    "whatsappAria": "Contact us on WhatsApp",
+    "find": "Find us",
+    "findNote": "Annaba, Algeria · Social media",
+    "mapLink": "See our location",
+    "mapTitle": "Alpha Web location in Annaba"
+  },
+  "footer": {
+    "services": "Services",
+    "webSites": "Websites",
+    "mobileApps": "Mobile apps",
+    "erp": "ERP software",
+    "agency": "Agency",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}

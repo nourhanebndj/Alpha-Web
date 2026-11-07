@@ -1,4 +1,4 @@
-
+import { useTranslation } from "react-i18next";
 import {
   FaInstagram,
   FaFacebookF,
@@ -18,34 +18,34 @@ const CONTACT = {
 };
 
 export default function Contact() {
+  const { t, i18n } = useTranslation();
   return (
     <section id="contact" className="contact-section">
       <div className="wrap">
-        <div className="contact-heading">
-          <span className="eyebrow">CONTACT</span>
-          <h2>Parlons de votre projet</h2>
+        <div className="contact-heading rv">
+          <span className="eyebrow">{t("contact.eyebrow")}</span>
+          <h2>{t("contact.title")}</h2>
           <p>
-            Une idée, un site web ou une application à développer ?
-            Contactez-nous directement.
+            {t("contact.text")}
           </p>
         </div>
 
         <div className="contact-grid">
-          <div className="contact-info">
+          <div className="contact-info rv">
             <div className="contact-card">
               <div className="contact-icon">
                 <FaEnvelope />
               </div>
               <div className="contact-text">
-                <strong>E-mail</strong>
+                <strong>{t("contact.email")}</strong>
                 <a href={`mailto:${CONTACT.email}`}>
-                  {CONTACT.email}
+                  <bdi>{CONTACT.email}</bdi>
                 </a>
               </div>
               <a
                 className="contact-arrow"
                 href={`mailto:${CONTACT.email}`}
-                aria-label="Envoyer un e-mail"
+                aria-label={t("contact.emailAria")}
               >
                 <FaArrowUpRightFromSquare />
               </a>
@@ -56,15 +56,15 @@ export default function Contact() {
                 <FaWhatsapp />
               </div>
               <div className="contact-text">
-                <strong>WhatsApp</strong>
-                <small>Écrivez-nous directement</small>
+                <strong>{t("contact.whatsapp")}</strong>
+                <small>{t("contact.whatsappNote")}</small>
               </div>
               <a
                 className="contact-arrow"
-                href={`https://wa.me/${CONTACT.whatsapp}`}
+                href={CONTACT.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Contacter sur WhatsApp"
+                aria-label={t("contact.whatsappAria")}
               >
                 <FaArrowUpRightFromSquare />
               </a>
@@ -75,8 +75,8 @@ export default function Contact() {
                 <FaLocationDot />
               </div>
               <div className="contact-text">
-                <strong>Retrouvez-nous</strong>
-                <small>Annaba, Algérie · Réseaux sociaux</small>
+                <strong>{t("contact.find")}</strong>
+                <small>{t("contact.findNote")}</small>
                 <div className="social-links">
                   <a
                     href={CONTACT.instagram}
@@ -112,14 +112,14 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Voir notre localisation <FaArrowUpRightFromSquare />
+              {t("contact.mapLink")} <FaArrowUpRightFromSquare />
             </a>
           </div>
 
-          <div className="contact-map">
+          <div className="contact-map rv">
             <iframe
-              title="Localisation Alpha Web à Annaba"
-              src="https://maps.google.com/maps?q=Annaba%2C%20Algeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              title={t("contact.mapTitle")}
+              src={`https://maps.google.com/maps?q=Annaba%2C%20Algeria&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=${i18n.language}`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen

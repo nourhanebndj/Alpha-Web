@@ -11,7 +11,10 @@ export default function Head({ title, text }) {
     const ctx = gsap.context(() => {
       gsap.from(".wi", {
         yPercent: 115,
-        duration: 0.8,
+        rotationX: -60,
+        transformPerspective: 700,
+        transformOrigin: "50% 100%",
+        duration: 0.9,
         stagger: 0.05,
         ease: "power4.out",
         scrollTrigger: { trigger: ref.current, start: "top 88%", once: true },

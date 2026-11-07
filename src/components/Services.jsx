@@ -1,16 +1,18 @@
+import { useTranslation } from "react-i18next";
 import Head from "./Head";
 import Icon from "./Icon";
-import { SERVICES } from "../data/content";
+import { SERVICE_ICONS } from "../data/content";
 
 export default function Services() {
+  const { t } = useTranslation();
   return (
     <section id="services">
       <div className="wrap">
-        <Head title="Tout ce qu’il faut pour réussir en ligne" text="Une seule équipe pour concevoir, développer et promouvoir votre produit digital." />
+        <Head title={t("services.title")} text={t("services.text")} />
         <div className="grid3">
-          {SERVICES.map((s) => (
+          {t("services.list", { returnObjects: true }).map((s, i) => (
             <article className="card rv" key={s.title}>
-              <Icon name={s.icon} />
+              <Icon name={SERVICE_ICONS[i]} />
               <h3>{s.title}</h3>
               <p>{s.text}</p>
               <ul>

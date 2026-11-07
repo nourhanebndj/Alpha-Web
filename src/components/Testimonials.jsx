@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { gsap, reduced } from "../motion";
 import useAutoplay from "../hooks/useAutoplay";
 import Head from "./Head";
 import Words from "./Words";
-import { TESTIMONIALS } from "../data/content";
 
-const N = TESTIMONIALS.length;
 const initials = (name) => name.split(" ").map((x) => x[0]).join("");
 
 const Chevron = ({ d }) => (
@@ -15,6 +14,9 @@ const Chevron = ({ d }) => (
 );
 
 export default function Testimonials() {
+  const { t: tr } = useTranslation();
+  const reviews = tr("testimonials.list", { returnObjects: true });
+  const N = reviews.length;
   const root = useRef(null);
   const card = useRef(null);
   const quote = useRef(null);
@@ -59,18 +61,18 @@ export default function Testimonials() {
     return () => ctx.revert();
   }, [shown]);
 
-  const t = TESTIMONIALS[shown];
+  const t = reviews[shown];
 
   return (
     <section id="avis" ref={root}>
       <div className="wrap">
-        <Head title="Ils nous font confiance" text="Ce que disent nos clients après la mise en ligne." />
+        <Head title={tr("testimonials.title")} text={tr("testimonials.text")} />
         <div className="ts rv" {...hoverProps}>
           <div className="tq" ref={card}>
             <span className="qm" aria-hidden="true">
               “
             </span>
-            <div className="stars" role="img" aria-label="5 étoiles sur 5">
+            <div className="stars" role="img" aria-label={tr("testimonials.stars")}>
               {[0, 1, 2, 3, 4].map((i) => (
                 <i key={i}>★</i>
               ))}
@@ -85,14 +87,14 @@ export default function Testimonials() {
               <div>
                 <b>{t.name}</b>
                 <small>
-                  {t.role}, {t.sector}
+                  {t.role} · {t.sector}
                 </small>
               </div>
             </div>
           </div>
           <div className="tnav">
-            <div className="ttabs" role="tablist" aria-label="Choisir un avis">
-              {TESTIMONIALS.map((x, i) => (
+            <div className="ttabs" role="tablist" aria-label={tr("testimonials.choose")}>
+              {reviews.map((x, i) => (
                 <button key={x.name} role="tab" aria-selected={active === i} onClick={() => select(i)}>
                   <b>{x.name.split(" ")[0]}</b>
                   <small>{x.sector}</small>
@@ -101,10 +103,10 @@ export default function Testimonials() {
               ))}
             </div>
             <div className="arr">
-              <button aria-label="Avis précédent" onClick={() => select((active - 1 + N) % N)}>
+              <button aria-label={tr("testimonials.previous")} onClick={() => select((active - 1 + N) % N)}>
                 <Chevron d="M15 18l-6-6 6-6" />
               </button>
-              <button aria-label="Avis suivant" onClick={() => select((active + 1) % N)}>
+              <button aria-label={tr("testimonials.next")} onClick={() => select((active + 1) % N)}>
                 <Chevron d="M9 18l6-6-6-6" />
               </button>
             </div>
