@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { gsap } from "../motion";
 import Head from "./Head";
-import { FAQ } from "../data/content";
 
 export default function Faq() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(-1);
   const panels = useRef([]);
 
@@ -27,9 +28,9 @@ export default function Faq() {
   return (
     <section id="faq">
       <div className="wrap">
-        <Head title="Questions fréquentes" />
+        <Head title={t("faq.title")} />
         <div className="faq rv">
-          {FAQ.map((f, i) => (
+          {t("faq.list", { returnObjects: true }).map((f, i) => (
             <div key={f.q} className={open === i ? "open" : ""}>
               <button aria-expanded={open === i} onClick={() => setOpen(open === i ? -1 : i)}>
                 {f.q}

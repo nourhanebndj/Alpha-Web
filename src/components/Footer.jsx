@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { CONTACT } from "../data/content";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="wrap">
@@ -12,27 +14,31 @@ export default function Footer() {
                 ALPHA <i>WEB</i>
               </span>
             </a>
-            <p>Sites web, applications mobiles et logiciels ERP : des solutions adaptées à vos besoins.</p>
+            <p>{t("hero.text")}</p>
           </div>
           <div>
-            <h4>Services</h4>
-            <a href="#services">Sites web</a>
-            <a href="#services">Applications mobiles</a>
-            <a href="#services">Logiciels ERP</a>
+            <h4>{t("footer.services")}</h4>
+            <a href="#services">{t("footer.webSites")}</a>
+            <a href="#services">{t("footer.mobileApps")}</a>
+            <a href="#services">{t("footer.erp")}</a>
           </div>
           <div>
-            <h4>Agence</h4>
-            <a href="#realisations">Réalisations</a>
-            <a href="#methode">Méthode</a>
-            <a href="#avis">Avis clients</a>
+            <h4>{t("footer.agency")}</h4>
+            <a href="#realisations">{t("nav.projects")}</a>
+            <a href="#methode">{t("nav.method")}</a>
+            <a href="#avis">{t("nav.reviews")}</a>
           </div>
           <div>
-            <h4>Contact</h4>
-            <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-            <p>{CONTACT.phone}</p>
+            <h4>{t("footer.contact")}</h4>
+            <a href={`mailto:${CONTACT.email}`}>
+              <bdi>{CONTACT.email}</bdi>
+            </a>
+            <p>
+              <span dir="ltr">{CONTACT.phone}</span>
+            </p>
           </div>
         </div>
-        <div className="copy">© 2026 Alpha Web. Tous droits réservés.</div>
+        <div className="copy">© 2026 Alpha Web. {t("footer.rights")}</div>
       </div>
     </footer>
   );

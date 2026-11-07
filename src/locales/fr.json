@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Alpha Web Annaba | Création de sites web et applications",
+    "description": "Alpha Web, agence de développement web à Annaba, Algérie : création de sites vitrines, boutiques e-commerce, applications mobiles et logiciels sur mesure."
+  },
+  "nav": {
+    "services": "Services",
+    "projects": "Réalisations",
+    "method": "Méthode",
+    "reviews": "Avis clients"
+  },
+  "header": {
+    "home": "Alpha Web, accueil",
+    "mainNav": "Navigation principale",
+    "quote": "Demander un devis",
+    "menu": "Menu",
+    "language": "Choisir la langue"
+  },
+  "hero": {
+    "tag": "Sites web · Applications · Logiciels ERP",
+    "titleStart": "Vos projets",
+    "titleAccent": "digitaux",
+    "titleEnd": "prennent vie",
+    "text": "Sites web, applications mobiles et logiciels ERP : des solutions adaptées à vos besoins.",
+    "ctaTalk": "Parler de votre projet",
+    "ctaWork": "Voir nos réalisations",
+    "badgeProjects": "projets livrés",
+    "badgeSatisfaction": "satisfaction client"
+  },
+  "services": {
+    "title": "Tout ce qu’il faut pour réussir en ligne",
+    "text": "Une seule équipe pour concevoir, développer et promouvoir votre produit digital.",
+    "list": [
+      {
+        "title": "Sites web",
+        "text": "Des sites modernes, rapides et adaptés à vos objectifs.",
+        "items": ["Sites vitrines", "Sites e-commerce", "Sites web sur mesure"]
+      },
+      {
+        "title": "Applications",
+        "text": "Des applications intuitives pour simplifier le quotidien de vos utilisateurs.",
+        "items": ["Applications mobiles iOS et Android", "Applications web", "Plateformes sur mesure"]
+      },
+      {
+        "title": "Logiciels ERP",
+        "text": "Des solutions de gestion pour centraliser et optimiser votre activité.",
+        "items": ["Gestion commerciale et des stocks", "Gestion des clients et des commandes", "Automatisation des processus"]
+      }
+    ]
+  },
+  "stats": [
+    { "suffix": "", "label": "projets livrés" },
+    { "suffix": " ans", "label": "d’expertise digitale" },
+    { "suffix": "%", "label": "de clients qui continuent avec nous" },
+    { "suffix": "", "label": "experts à vos côtés" }
+  ],
+  "commitments": {
+    "title": "Un partenaire qui s’engage à vos côtés",
+    "text": "Nous travaillons comme une extension de votre équipe, du premier échange jusqu’après la livraison.",
+    "cta": "Parler de votre projet",
+    "list": [
+      {
+        "title": "Une approche personnalisée",
+        "text": "Chaque projet commence par l’écoute de vos besoins afin de concevoir une solution adaptée à vos objectifs et à votre activité."
+      },
+      {
+        "title": "Une communication transparente",
+        "text": "Vous restez informé à chaque étape grâce à des échanges réguliers et à un suivi clair de l’avancement de votre projet."
+      },
+      {
+        "title": "Des délais maîtrisés",
+        "text": "Une organisation structurée et une planification précise pour avancer efficacement et respecter les échéances convenues."
+      },
+      {
+        "title": "Fiabilité et évolutivité",
+        "text": "Des solutions conçues avec soin, faciles à faire évoluer et pensées pour accompagner durablement le développement de votre activité."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Nos réalisations",
+    "text": "Découvrez une sélection de projets conçus pour répondre à des besoins concrets.",
+    "visit": "Visiter le site",
+    "list": [
+      {
+        "kind": "Plateforme d’annonces",
+        "title": "KhidmaCar",
+        "text": "Une plateforme d’annonces automobiles en Algérie : location, vente et services, avec recherche par catégorie et par commune.",
+        "alt": "Page d’accueil de la plateforme d’annonces KhidmaCar"
+      },
+      {
+        "kind": "Site de réservation",
+        "title": "Le Point de Location",
+        "text": "Le site d’une agence de location de voitures à Annaba : présentation des véhicules et réservation en ligne selon le lieu et les dates.",
+        "alt": "Page d’accueil du site de location de voitures Le Point de Location"
+      },
+      {
+        "kind": "Site vitrine",
+        "title": "Le Gourmet Tlemcen",
+        "text": "Le site d’un restaurant à Tlemcen : son histoire, sa carte, sa galerie et un accès direct à l’itinéraire et à la réservation par téléphone.",
+        "alt": "Page d’accueil du site du restaurant Le Gourmet à Tlemcen"
+      }
+    ]
+  },
+  "method": {
+    "title": "De l’idée au produit en ligne, en quatre étapes",
+    "text": "Un processus clair, avec votre validation à chaque étape.",
+    "stepsLabel": "Étapes du projet",
+    "list": [
+      {
+        "title": "Comprendre",
+        "short": "Besoins, objectifs et priorités",
+        "text": "Nous échangeons sur votre projet, vos objectifs, vos utilisateurs et vos besoins afin de définir une direction claire.",
+        "tags": ["Analyse des besoins", "Objectifs", "Planification"]
+      },
+      {
+        "title": "Concevoir",
+        "short": "Structure, parcours et maquettes",
+        "text": "Nous définissons la structure et l’expérience utilisateur, puis réalisons des maquettes que vous pouvez valider avant le développement.",
+        "tags": ["Architecture", "UX/UI Design", "Prototype"]
+      },
+      {
+        "title": "Développer",
+        "short": "Réalisation, tests et livraison",
+        "text": "Nous donnons vie au projet avec un développement progressif, des tests réguliers et une mise en ligne préparée avec soin.",
+        "tags": ["Développement", "Tests et validation", "Livraison"]
+      },
+      {
+        "title": "Faire évoluer",
+        "short": "Suivi, améliorations et pérennité",
+        "text": "Après la livraison, nous pouvons assurer le suivi du projet, identifier les améliorations utiles et l’adapter à vos nouveaux besoins.",
+        "tags": ["Suivi", "Améliorations", "Maintenance"]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ils nous font confiance",
+    "text": "Ce que disent nos clients après la mise en ligne.",
+    "stars": "5 étoiles sur 5",
+    "choose": "Choisir un avis",
+    "previous": "Avis précédent",
+    "next": "Avis suivant",
+    "list": [
+      {
+        "quote": "Une équipe réactive qui a compris notre métier dès le premier atelier. Le site est rapide et nos clients le remarquent.",
+        "name": "Sarah M.",
+        "role": "Responsable communication",
+        "sector": "E-commerce"
+      },
+      {
+        "quote": "L’application a été livrée dans les délais, avec un vrai suivi après la mise en ligne.",
+        "name": "Karim B.",
+        "role": "Directeur général",
+        "sector": "Logistique"
+      },
+      {
+        "quote": "Nos demandes sont traitées avec sérieux, même dans l’urgence. Un partenaire de confiance.",
+        "name": "Yasmine L.",
+        "role": "Cheffe de projet digital",
+        "sector": "Santé"
+      },
+      {
+        "quote": "Notre nouvelle plateforme a fait gagner du temps à toute l’équipe. Le résultat dépasse nos attentes.",
+        "name": "Nadir H.",
+        "role": "Directeur des opérations",
+        "sector": "Industrie"
+      },
+      {
+        "quote": "Le référencement a doublé nos demandes de devis en quelques mois. Merci pour la transparence des rapports.",
+        "name": "Amel R.",
+        "role": "Fondatrice",
+        "sector": "Services"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "list": [
+      {
+        "q": "Combien coûte un site ou une application ?",
+        "a": "Le prix dépend de la complexité et des fonctionnalités. Nous établissons un devis détaillé et gratuit après un premier échange."
+      },
+      {
+        "q": "Quels sont vos délais ?",
+        "a": "Comptez quelques semaines pour un site vitrine et deux à quatre mois pour une application mobile, selon le périmètre."
+      },
+      {
+        "q": "Pourrai-je modifier mon site seul ?",
+        "a": "Oui. Nous formons votre équipe pour gérer les contenus en autonomie."
+      },
+      {
+        "q": "Assurez-vous la maintenance ?",
+        "a": "Oui : mises à jour, sauvegardes, sécurité et évolutions après la livraison."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "CONTACT",
+    "title": "Parlons de votre projet",
+    "text": "Une idée, un site web ou une application à développer ? Contactez-nous directement.",
+    "email": "E-mail",
+    "emailAria": "Envoyer un e-mail",
+    "whatsapp": "WhatsApp",
+    "whatsappNote": "Écrivez-nous directement",
+    "whatsappAria": "Contacter sur WhatsApp",
+    "find": "Retrouvez-nous",
+    "findNote": "Annaba, Algérie · Réseaux sociaux",
+    "mapLink": "Voir notre localisation",
+    "mapTitle": "Localisation d’Alpha Web à Annaba"
+  },
+  "footer": {
+    "services": "Services",
+    "webSites": "Sites web",
+    "mobileApps": "Applications mobiles",
+    "erp": "Logiciels ERP",
+    "agency": "Agence",
+    "contact": "Contact",
+    "rights": "Tous droits réservés."
+  }
+}

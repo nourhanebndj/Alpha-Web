@@ -259,117 +259,6 @@ nav a:hover {
 .mock {
   position: relative;
   min-height: 340px;
-  isolation: isolate;
-}
-
-.blob {
-  position: absolute;
-  top: -1.8rem;
-  right: 6%;
-  z-index: -1;
-  width: 58%;
-  aspect-ratio: 1;
-  border: 3px solid var(--gold);
-  border-radius: 2.2rem;
-}
-
-.win {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  background: var(--card);
-  box-shadow: 0 30px 60px -30px rgba(10, 15, 46, 0.35);
-}
-
-.win .top {
-  display: flex;
-  gap: 0.4rem;
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.win .top i {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 50%;
-  background: var(--line);
-}
-
-.win .body {
-  display: grid;
-  gap: 0.8rem;
-  padding: 1.4rem;
-}
-
-.win b {
-  display: block;
-  height: 0.8rem;
-  border-radius: 9px;
-  background: var(--line);
-}
-
-.win b.h {
-  width: 60%;
-  height: 1.6rem;
-  background: var(--tx);
-  opacity: 0.85;
-}
-
-.win .row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-}
-
-.win .row u {
-  display: block;
-  height: 4.5rem;
-  border: 1px solid var(--line);
-  border-radius: 0.7rem;
-  background: var(--soft);
-}
-
-.win .row u:first-child {
-  background: var(--blue);
-}
-
-.win .row u:last-child {
-  background: #fff;
-}
-
-.phone {
-  position: absolute;
-  right: -1rem;
-  bottom: -2rem;
-  display: grid;
-  align-content: start;
-  gap: 0.6rem;
-  width: 36%;
-  aspect-ratio: 9 / 18;
-  padding: 0.9rem;
-  border: 4px solid #333;
-  border-radius: 1.6rem;
-  background: #000;
-  box-shadow: 0 30px 60px -20px rgba(10, 15, 46, 0.5);
-}
-
-.phone i {
-  display: block;
-  height: 0.6rem;
-  border-radius: 9px;
-  background: #333;
-}
-
-.phone i:first-child {
-  width: 45%;
-  background: var(--gold);
-}
-
-.phone u {
-  display: block;
-  height: 3.4rem;
-  border-radius: 0.7rem;
-  background: var(--blue);
 }
 
 .bdg {
@@ -499,12 +388,12 @@ nav a:hover {
   border: 1px solid var(--line);
   border-radius: 1.2rem;
   background: var(--card);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -24px rgba(10, 15, 46, 0.35);
+  border-color: rgba(242, 182, 50, 0.45);
+  box-shadow: 0 34px 60px -34px rgba(242, 182, 50, 0.4);
 }
 
 .ic {
@@ -610,37 +499,12 @@ nav a:hover {
 .th {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;
   margin-bottom: 20px;
   overflow: hidden;
-  border-radius: 16px;
-  background: #f3f3f3;
-}
-
-.pj:nth-child(1) .th {
-  background: var(--gold);
-}
-
-.pj:nth-child(2) .th {
   border: 1px solid var(--line);
-  background: #1c1c1c;
-}
-
-.pj:nth-child(3) .th {
-  background: #fff;
-}
-
-.pj:nth-child(4) .th {
-  background: #3a2d0c;
-}
-
-.pj .win {
-  width: 62%;
-  box-shadow: none;
-}
-
-.pj .win .body {
-  padding: 1rem;
+  border-radius: 16px;
+  background: var(--card);
 }
 
 .project-image {
@@ -649,7 +513,11 @@ nav a:hover {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.pj:hover .project-image {
+  transform: scale(1.05);
 }
 
 .pj small {
@@ -1549,12 +1417,6 @@ footer a:hover {
    18. RESPONSIVE : PETITS ÉCRANS
 ======================================== */
 
-@media (max-width: 768px) {
-  .th {
-    aspect-ratio: 4 / 3;
-  }
-}
-
 @media (max-width: 600px) {
   .wrap {
     padding-right: 5vw;
@@ -1589,13 +1451,540 @@ footer a:hover {
     animation: none;
   }
 
-  .project-image {
-    will-change: auto;
-  }
-
+  .project-image,
   .project-link,
   .contact-card,
   .contact-arrow {
     transition: none;
   }
+}
+
+
+/* ========================================
+   20. HERO 3D
+======================================== */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 60% at 74% 46%, rgba(242, 182, 50, 0.09), transparent 70%),
+    #000;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 45%, #000, transparent);
+  mask-image: radial-gradient(70% 70% at 50% 45%, #000, transparent);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 7rem;
+  background: linear-gradient(transparent, #000);
+  pointer-events: none;
+}
+
+.hero-gl {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  pointer-events: none;
+}
+
+.hero-gl.ready {
+  opacity: 1;
+}
+
+.hero-gl canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero .wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.2vw, 4.5rem);
+  line-height: 1.06;
+}
+
+.hero h1 u .wi {
+  background: linear-gradient(100deg, #ffe2a0, var(--gold) 45%, #c98a12);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Laisse la place aux jambages (g, j, p) dans le masque et le dégradé */
+.hero h1 .w {
+  margin-bottom: -0.2em;
+  padding-bottom: 0.2em;
+}
+
+.hero h1 u .wi {
+  margin-bottom: -0.2em;
+  padding-bottom: 0.2em;
+}
+
+.tag {
+  background: #101010;
+}
+
+.mock {
+  min-height: min(38rem, 68vh);
+  transform-style: preserve-3d;
+}
+
+.mock-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.bdg {
+  background: rgba(17, 17, 17, 0.94);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 50px -22px rgba(0, 0, 0, 0.9);
+}
+
+.b1 {
+  top: 14%;
+  left: -1%;
+}
+
+.b2 {
+  top: auto;
+  right: 0;
+  bottom: 14%;
+  left: auto;
+}
+
+
+/* ========================================
+   21. CARTES EN 3D
+======================================== */
+
+.tilt {
+  position: relative;
+  transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transform-style: preserve-3d;
+}
+
+/* Reflet doré qui suit la souris */
+.tilt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(26rem circle at var(--mx, 50%) var(--my, 50%), rgba(242, 182, 50, 0.17), transparent 62%);
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+
+.tilt.hot::after {
+  opacity: 1;
+}
+
+/* Le contenu se détache de la carte au survol */
+.card > * {
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card.hot .ic {
+  transform: translateZ(48px);
+}
+
+.card.hot h3 {
+  transform: translateZ(30px);
+}
+
+.card.hot p,
+.card.hot ul {
+  transform: translateZ(16px);
+}
+
+.ic {
+  background: linear-gradient(145deg, rgba(242, 182, 50, 0.16), var(--soft));
+}
+
+.pj .th {
+  box-shadow: 0 30px 50px -36px rgba(242, 182, 50, 0.35);
+  transition: box-shadow 0.4s;
+}
+
+.pj .th.hot {
+  box-shadow: 0 44px 70px -34px rgba(242, 182, 50, 0.55);
+}
+
+.stp,
+.tq {
+  background-image: radial-gradient(70% 90% at 100% 0%, rgba(242, 182, 50, 0.1), transparent 70%);
+}
+
+
+/* ========================================
+   22. FINITIONS
+======================================== */
+
+/* Barre de progression de lecture */
+#pg {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, #c98a12, var(--gold), #ffe2a0);
+}
+
+/* En-tête transparent en haut de page */
+header {
+  transition: background 0.3s, border-color 0.3s;
+}
+
+header:not(.sc) {
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+}
+
+nav a {
+  position: relative;
+  transition: color 0.25s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.2rem;
+  left: 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--gold);
+  transition: transform 0.3s;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Boutons : balayage lumineux et halo */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 40%;
+  transform: skewX(-20deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transition: left 0.6s;
+  pointer-events: none;
+}
+
+.btn:hover::before {
+  left: 120%;
+}
+
+.btn:hover {
+  box-shadow: 0 14px 34px -12px rgba(242, 182, 50, 0.65);
+}
+
+.btn.out:hover {
+  border-color: var(--gold);
+  box-shadow: none;
+}
+
+/* Bandeau de technologies : bords en fondu */
+.strip {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+@media (max-width: 860px) {
+  .hero {
+    display: block;
+    min-height: 0;
+    padding-bottom: 3rem;
+    background:
+      radial-gradient(90% 40% at 50% 74%, rgba(242, 182, 50, 0.1), transparent 70%),
+      #000;
+  }
+
+  .hg {
+    gap: 1.5rem;
+  }
+
+  .mock {
+    min-height: 22rem;
+    margin-bottom: 0;
+  }
+
+  .b1 {
+    top: 6%;
+    left: 0;
+  }
+
+  .b2 {
+    right: 0;
+    bottom: 6%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn::before,
+  .card > *,
+  .hero-gl {
+    transition: none;
+  }
+}
+
+
+/* ========================================
+   23. SÉLECTEUR DE LANGUE
+======================================== */
+
+.bar-end {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.langs {
+  display: flex;
+  padding: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: rgba(17, 17, 17, 0.7);
+}
+
+.langs button {
+  min-width: 2.2rem;
+  padding: 0.3rem 0.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: none;
+  color: var(--mut);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.langs button[lang="ar"] {
+  font-family: "Cairo", system-ui, sans-serif;
+}
+
+.langs button:hover {
+  color: var(--tx);
+}
+
+.langs button[aria-pressed="true"] {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+@media (max-width: 1080px) {
+  .bar {
+    gap: 1rem;
+  }
+
+  nav {
+    gap: 1.2rem;
+  }
+
+  header .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .bar-end {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo span {
+    font-size: 0.9rem;
+  }
+
+  .lg {
+    height: 30px;
+  }
+
+  .langs button {
+    min-width: 1.9rem;
+    padding: 0.25rem 0.35rem;
+  }
+
+  .burger {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ========================================
+   24. ARABE : LECTURE DE DROITE À GAUCHE
+======================================== */
+
+html[lang="ar"] body {
+  font-family: "Cairo", "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* Un interlettrage négatif casserait la liaison des lettres arabes */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] .contact-heading .eyebrow {
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+/* Les lettres arabes descendent et montent plus : plus de marge dans les masques de mots */
+html[lang="ar"] .w,
+html[lang="ar"] .hero h1 .w {
+  margin-block: -0.2em -0.4em;
+  padding-block: 0.2em 0.4em;
+}
+
+html[lang="ar"] .hero h1 u .wi {
+  margin-block: -0.2em -0.4em;
+  padding-block: 0.2em 0.4em;
+}
+
+html[dir="rtl"] .hero {
+  background:
+    radial-gradient(60% 60% at 26% 46%, rgba(242, 182, 50, 0.09), transparent 70%),
+    #000;
+}
+
+html[dir="rtl"] .bdg b {
+  margin-right: 0;
+  margin-left: 0.3rem;
+}
+
+html[dir="rtl"] .b1 {
+  right: -1%;
+  left: auto;
+}
+
+html[dir="rtl"] .b2 {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .card li {
+  padding: 0.3rem 1.6rem 0.3rem 0;
+}
+
+html[dir="rtl"] .card li::before {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] #pg,
+html[dir="rtl"] nav a::after,
+html[dir="rtl"] .cm::after,
+html[dir="rtl"] .stl .pb,
+html[dir="rtl"] .ttabs .pb {
+  transform-origin: right;
+}
+
+html[dir="rtl"] .stl button,
+html[dir="rtl"] .ttabs button,
+html[dir="rtl"] .faq button {
+  text-align: right;
+}
+
+html[dir="rtl"] .stl button:hover {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .stp .bn,
+html[dir="rtl"] .qm {
+  right: auto;
+  left: 1.5rem;
+}
+
+html[dir="rtl"] .stp .tg span {
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+html[dir="rtl"] .stp,
+html[dir="rtl"] .tq {
+  background-image: radial-gradient(70% 90% at 0% 0%, rgba(242, 182, 50, 0.1), transparent 70%);
+}
+
+html[dir="rtl"] .contact-arrow {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .contact-card:hover .contact-arrow {
+  transform: translate(-3px, -3px);
+}
+
+/* Les flèches changent de sens avec la lecture */
+html[dir="rtl"] .arr svg,
+html[dir="rtl"] .contact-arrow svg,
+html[dir="rtl"] .map-link svg {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .project-link span {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+/* Le défilement infini des logos garde son sens d'origine */
+html[dir="rtl"] .strip {
+  direction: ltr;
+}
+
+@media (max-width: 860px) {
+  html[dir="rtl"] .b1 {
+    right: 0;
+  }
+}
+
+/* Les blocs inclinés avant leur apparition dépassent de l'écran : sans cette limite,
+   les téléphones élargissent toute la page. `clip` garde le contenu collant fonctionnel. */
+.page {
+  overflow-x: clip;
 }
